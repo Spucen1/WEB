@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: black;
+}
+
+.glassmorphic-card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}

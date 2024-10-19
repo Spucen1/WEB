@@ -1,0 +1,22 @@
+body {
+    width: 100%;
+    background-color: #0f0f0f;
+}
+
+h1 {
+    color: #473f31;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    color: #1c160d;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img {
+    width: 100%;
+}
