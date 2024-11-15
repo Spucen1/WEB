@@ -17,3 +17,16 @@ body {
     border-radius: 30px;
 
 }
+
+aside {
+    display: flex;
+    padding: 10px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    display: inline;
+}
