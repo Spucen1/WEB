@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Geist+Mono:wght@100..900&display=swap');
 
-.nadpis1 {
-    font-family: "Edu AU VIC WA NT Pre", cursive;
+body {
+    width: 800px;
+    margin: auto;
 }
 
+.nadpis1 {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    border-top: 2px darkblue solid;
+    border-bottom: 1px black solid;
+    border-left: 3px darkorchid solid;
+    border-right: 4px darkgray solid;
+    background-color: darkcyan;
+    padding: 10px 10px 5px 10px;
+    margin: 10px 20px 30px 40px;
+    border-radius: 30px;
+
+}
