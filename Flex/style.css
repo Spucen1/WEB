@@ -1,0 +1,43 @@
+ html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    order: inherit;
+    height: 100%;
+    margin: 0;
+    border: 2px orange solid;
+
+
+    
+}
+
+p{
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.prvy{
+    order: 3;
+    background-color: plum;
+}
+
+.druhy{
+    order: 1;
+    background-color: burlywood;
+}
+
+.treti{
+    order: 2;
+    background-color: cyan;
+    flex-grow: 2;
+}
