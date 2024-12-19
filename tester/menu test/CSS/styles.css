@@ -92,6 +92,7 @@ main {
     background-color: black;
     height: 2px;
     width: 12px;
+    opacity: 0;
 }
 
 .button2 {
