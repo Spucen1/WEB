@@ -1,6 +1,5 @@
 function menu() {
-    if (document.getElementById('button').style.transform === "rotate(90deg)") {
-        document.getElementById('button').style.transform = ""
+    if (document.getElementById("aside1").style.top === "0px") {
         document.getElementById("aside1").style.top = ""
         document.querySelectorAll("li").forEach(li => {
             li.style.opacity = ""
@@ -13,7 +12,6 @@ function menu() {
         document.getElementById("rot").style.transform = ""
     }
     else {
-        document.getElementById('button').style.transform = "rotate(90deg)"
         document.getElementById("aside1").style.top = "0"
         document.querySelectorAll("li").forEach(li => {
             li.style.opacity = "1"
