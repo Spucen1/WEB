@@ -10,8 +10,7 @@ function menu() {
         document.getElementById("item3").classList.remove("item3");
         document.getElementById("item4").classList.remove("item4");
         document.getElementById("rot").style.transform = ""
-    }
-    else {
+    } else {
         document.getElementById("aside1").style.top = "0"
         document.querySelectorAll("li").forEach(li => {
             li.style.opacity = "1"
@@ -36,8 +35,7 @@ function dakrmode() {
         document.querySelectorAll("a").forEach(a => {
             a.style.color = "#f0f0f0"
           });
-    }
-    else {
+    } else {
         document.getElementById("button2").textContent = "☀️"
         document.getElementById("button2").style.backgroundColor = ""
         document.querySelector("body").style.backgroundColor = ""
