@@ -165,6 +165,6 @@ main {
 
 ---
 
-##Notes on Learning
+## Notes on Learning
 
 This repository includes my learning journey through HTML and CSS, with a focus on web design and layout. Some projects are simple and school-related, while others are more experimental and personal. Although I’ve tried using JavaScript in a few projects, it is not a primary focus in most of the files.
