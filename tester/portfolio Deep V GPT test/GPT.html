@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.1); /* Transparent background */
+      backdrop-filter: blur(10px); /* Apply blur to background */
+      padding: 10px;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      transition: background-color 0.3s ease;
+      font-size: 18px;
+    }
+    nav a:hover {
+      background-color: #555;
+    }
+    section {
+      padding: 80px 20px;
+      margin-top: 50px;
+      text-align: center;
+      min-height: 100vh;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+    .active {
+      opacity: 1;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+    .intro {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+      backdrop-filter: blur(15px); /* Glassmorphism effect */
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+      z-index: 10; /* Ensure intro section is above other sections */
+    }
+    .intro h1 {
+      font-size: 48px;
+      color: #fff;
+    }
+    .intro p {
+      font-size: 20px;
+      color: #fff;
+    }
+    .cards-container, .portfolio-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .card, .portfolio-item {
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+      backdrop-filter: blur(10px); /* Glassmorphism effect */
+      padding: 30px;
+      border-radius: 20px;
+      width: 280px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+    .card:hover, .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+    .card h3, .portfolio-item h3 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      background-color: #222;
+      color: #fff;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #555;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">O mne</a>
+      <a href="#skills">Zručnosti</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <div class="intro">
+    <div>
+      <h1>Vitajte na mojom portfóliu</h1>
+      <p>Tu nájdete moje projekty a zručnosti v oblasti technológie a dizajnu.</p>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" style="margin-top: 100vh;">
+    <h1>O mne</h1>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Moja vášeň</h3>
+        <p>Rád sa venujem technológiam, tvorbe webových stránok a aplikácií. Neustále sa učím nové zručnosti a inovujem svoje projekty.</p>
+      </div>
+      <div class="card">
+        <h3>Moje skúsenosti</h3>
+        <p>Začal som s HTML a CSS, neskôr som prešiel na JavaScript a Python. Momentálne sa zaoberám pokročilými technikami a frameworkami.</p>
+      </div>
+      <div class="card">
+        <h3>Osobné záujmy</h3>
+        <p>Mimo technológií sa venujem grafickému dizajnu, fotografovaniu a videoprodukcii. Vždy sa snažím spojiť techniku a kreativitu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h1>Zručnosti</h1>
+    <div class="cards-container">
+      <div class="card">
+        <h3>HTML & CSS</h3>
+        <p>Vytváranie moderných webových stránok s responzívnym dizajnom. Dobre ovládam Flexbox a Grid systém.</p>
+      </div>
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>Programovanie interaktívnych webových aplikácií, práca s DOM, AJAX a modernými JavaScript frameworkmi.</p>
+      </div>
+      <div class="card">
+        <h3>Python</h3>
+        <p>Vytváranie skriptov a aplikácií v Python, automatizácia procesov, analýza dát a spracovanie informácií.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h1>Portfólio</h1>
+    <div class="portfolio-container">
+      <div class="portfolio-item">
+        <h3>Projekt 1</h3>
+        <p>Stránka pre školu, jednoduchý dizajn s využitím HTML a CSS. Responsívna verzia pre mobilné zariadenia.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Projekt 2</h3>
+        <p>Interaktívna aplikácia v Pythone na správu osobných poznámok, s podporou viacerých jazykov.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Projekt 3</h3>
+        <p>Webová aplikácia na generovanie náhodných citátov, využívajúca JavaScript a API volania.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Projekt 4</h3>
+        <p>Portfolio stránka s moderným dizajnom, kde zobrazuje moje projekty a technológie, ktoré ovládam.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Projekt 5</h3>
+        <p>Prehľadný nástroj na sledovanie úloh a projektov, ktorý využíva JavaScript pre interaktivitu.</p>
+      </div>
+      <div class="portfolio-item">
+        <h3>Projekt 6</h3>
+        <p>Webová aplikácia pre správu úloh a termínov s použitím Python a Django frameworku.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Kontakt</h1>
+    <p>Ak máte záujem o spoluprácu alebo máte akékoľvek otázky, neváhajte ma kontaktovať cez tento formulár.</p>
+
+    <form action="#" method="POST">
+      <input type="text" name="name" placeholder="Tvoje meno" required>
+      <input type="email" name="email" placeholder="Tvoj email" required>
+      <textarea name="message" placeholder="Tvoja správa" rows="4" required></textarea>
+      <button type="submit">Odoslať</button>
+    </form>
+  </section>
+
+  <script>
+    // Animácie a prístupnosť k sekciám
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        window.scrollTo({
+          top: targetSection.offsetTop - 50,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 1.5) {
+          section.classList.add('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
