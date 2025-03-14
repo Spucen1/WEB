@@ -13,15 +13,15 @@ div{
 .container{
     display: grid;
     grid-template-areas: 
-        "A B C D"
-        "A E F F"
-        "A G H I";
+        "A A B C D E"
+        "A A B F G G"
+        "H I J K L M";
     grid-gap: 10px;
 }
 
 .item1{
     grid-area: A;
-    background-color: #f1690f;
+    background: linear-gradient(90deg, #c57600, #55d50a);
 }
 
 .item2{
@@ -64,4 +64,18 @@ div{
     background-color: #a47272;
 }
 
+.item10{
+    grid-area: J;
+    background-color: #f1f10f;
+}
+
+.item11{
+    grid-area: K;
+    background-color: #0ff1f1;
+}
+
+.item12{
+    grid-area: L;
+    background-color: #f10f0f;
+}
     
