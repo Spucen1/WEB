@@ -21,7 +21,7 @@ div{
 
 .item1{
     grid-area: A;
-    background: linear-gradient(90deg, #c57600, #55d50a);
+    background: linear-gradient(90deg, #c57600, #55d50a, #0ff1f1);
 }
 
 .item2{
