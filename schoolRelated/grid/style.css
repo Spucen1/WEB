@@ -78,4 +78,35 @@ div{
     grid-area: L;
     background-color: #f10f0f;
 }
-    
+
+.container2{
+    display: grid;
+    grid-template-areas:
+        "A A A"
+        "B C C"
+        "D D D";
+    grid-gap: 10px;
+}
+.ite{
+    grid-area: A;
+    background-color: #f10f0f;
+    height: 100px; 
+}
+
+.ite2{
+    grid-area: B;
+    background-color: #0ff1f1;
+    height: 300px;
+}
+
+.ite3{
+    grid-area: C;
+    background-color: #0ff1bc;
+    height: 300px;
+}
+
+.ite4{
+    grid-area: D;
+    background-color: #f1c40f;
+    height: 100px;
+}
