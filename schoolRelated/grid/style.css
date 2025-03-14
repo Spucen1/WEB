@@ -89,24 +89,24 @@ div{
 }
 .ite{
     grid-area: A;
-    background-color: #f10f0f;
-    height: 100px; 
+    background-color: #62ed17;
+    height: 200px; 
 }
 
 .ite2{
     grid-area: B;
-    background-color: #0ff1f1;
-    height: 300px;
+    background-color: #f10fd7;
+    height: 600px;
 }
 
 .ite3{
     grid-area: C;
-    background-color: #0ff1bc;
-    height: 300px;
+    background-color: #0fb1f1;
+    height: 600px;
 }
 
 .ite4{
     grid-area: D;
-    background-color: #f1c40f;
-    height: 100px;
+    background-color: #62ed17;
+    height: 200px;
 }
