@@ -7,5 +7,61 @@ body{
     /* height: 100%; */
 }
 
+div{
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+        "A B C D"
+        "A E F F"
+        "A G H I";
+    grid-gap: 10px;
+}
+
+.item1{
+    grid-area: A;
+    background-color: #f1690f;
+}
+
+.item2{
+    grid-area: B;
+    background-color: #f1c40f;
+}  
+
+.item3{
+    grid-area: C;
+    background-color: #b5f10f;
+}
+
+.item4{
+    grid-area: D;
+    background-color: #0ff1bc;
+}
+
+.item5{
+    grid-area: E;
+    background-color: #400ff1;
+}
+
+.item6{
+    grid-area: F;
+    background-color: #cf0ff1;
+}
+
+.item7{
+    grid-area: G;
+    background-color: #f10fc8;
+}
+
+.item8{
+    grid-area: H;
+    background-color: #f10f69;
+}
+
+.item9{
+    grid-area: I;
+    background-color: #a47272;
+}
 
     
