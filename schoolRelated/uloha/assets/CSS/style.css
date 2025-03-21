@@ -1,6 +1,35 @@
 :root{
-    --light-red: hsl(0, 100%, 67%);
-    --orangey-yellow: hsl(39, 100%, 56%);
-    --green-teal: hsl(166, 100%, 37%);
-    --cobalt-blue: hsl(234, 85%, 45%);
+    --orange: hsl(0, 100%, 67%);
+    --oranzovo-zlta: hsl(39, 100%, 56%);
+    --zelena: hsl(166, 100%, 37%);
+    --modra: hsl(234, 85%, 45%);
+    --biela: hsl(0, 0%, 100%);
+    --seda: hsl(221, 100%, 96%);
+    --svetlo-modra: hsl(241, 100%, 89%);
+    --tmava-seda: hsl(224, 30%, 27%);
+ 
+    /* prechody */
+    --modry-prechod: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+ 
+    --dalsi-prechod: radial-gradient(circle, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+} 
+
+.summary__div-reaction{
+    background-color: var(--orange);
+    display: flex;
+}
+
+.summary__div-memory{
+    background-color: var(--oranzovo-zlta);
+    display: flex;
+}
+
+.summary__div-verbal{
+    background-color: var(--zelena);
+    display: flex;
+}
+
+.summary__div-visual{
+    background-color: var(--modra);
+    display: flex;
 }
