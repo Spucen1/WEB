@@ -28,5 +28,24 @@ body {
   padding: 0;
   background-image: url("https://images.unsplash.com/photo-1617079114138-9cf245e006c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;                     
-  
+  background-position: center;
+  display: flex;
+  justify-content: center;          
+  align-items: center;
+  text-align: center;
+}
+
+.header__h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4vw;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header__text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2vw;
+  margin: 0;
+  padding: 0;
 }
