@@ -1,0 +1,23 @@
+:root {
+  --primarna: #ffffff;                     /* Primárna farba - biela */
+  --sekundarna: #111111;                   /* Sekundárna farba - čierna */
+  --prekritie: rgba(0, 0, 0, 0.5);            /* Prekrytie - polopriehľadná čierna */
+}
+
+* {
+  box-sizing: border-box;                     /* Padding a border sa započítavajú do celkovej veľkosti */
+}
+
+body {
+  margin: 0;                                  /* Odstráni okraje okolo tela stránky */
+  font-family: var(--font-main);              /* Použije písmo z premennej */
+  color: var(--primarna);                /* Farba textu - biela */
+  background-color: var(--sekundarna);   /* Tmavé pozadie stránky */
+  line-height: 1.6;                           /* Vzdialenosť medzi riadkami */
+}
+
+.container {
+  max-width: 1250px;                          /* Maximálna šírka kontajnera */
+  margin: 0 auto;                             /* Horizontálne vycentrovanie */
+  padding: 1rem;                              /* Vnútorné odsadenie */
+}
