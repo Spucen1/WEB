@@ -2,6 +2,7 @@
   --primarna: #f0f0f0;                     /* Primárna farba - biela */
   --podnapis: #dddddd;                     /* Podnápis - svetlošedá */
   --sekundarna: #111111;                   /* Sekundárna farba - čierna */
+  --buttom__hover: linear-gradient(90deg, #999999, #dddddd); /* Prechodová farba pre hover efekt */
   --prekritie: rgba(0, 0, 0, 0.5);            /* Prekrytie - polopriehľadná čierna */
   --prekritie2: rgba(0, 0, 0, 0.3);           /* Prekrytie - polopriehľadná čierna */
 }
@@ -67,16 +68,17 @@ body {
 
 .gallery {
   width: 100vw;
-  margin: 6vh 5px;
+  margin: 6vh -1vw 6vh 0.5vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
 }
 
 .gallery img {
   width: 24vw;
   height: 17vw;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
   position: relative;
   border-radius: 10px;
   object-fit: cover;
@@ -110,7 +112,7 @@ body {
   position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 3vw;
-  color: var(--podnapis);
+  color: var(--primarna);
   margin: 0;
   padding: 0;
   text-align: center;
@@ -138,4 +140,9 @@ body {
   padding: 1.7% 4%;
   border-radius: 50px;
   text-align: center;
+  cursor: pointer;
+}
+
+.blur__button:hover {
+  background: var(--buttom__hover);
 }
