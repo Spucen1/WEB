@@ -20,7 +20,7 @@ body {
     justify-content: center;
     margin: 0;
     width: 100%;
-    height: 55vh;
+    height: 40vw;
 }
 
 .logo {
@@ -32,7 +32,7 @@ body {
 }
 
 .logo img {
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 
@@ -50,6 +50,12 @@ body {
 
 .name {
     font-family: "josefin sans", sans-serif;
-    font-size: 70px;
-    margin: 10% 0px;
+    font-size: 6vw;
+    margin: 7% 0px;
+}
+
+.contact {
+    font-family: "josefin sans", sans-serif;
+    font-size: 3vw;
+    line-height: 0.5;
 }
