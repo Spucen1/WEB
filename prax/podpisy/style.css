@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "montserrat", sans-serif;
+    font-family: "josefin sans", sans-serif;
 }
 
 .container {
@@ -41,7 +41,7 @@ body {
 }
 
 .name {
-    font-family: "montserrat", sans-serif;
+    font-family: "josefin sans", sans-serif;
     font-size: 70px;
     margin: 20px 0px;
 }
