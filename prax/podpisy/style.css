@@ -1,3 +1,11 @@
+.josefin-sans-idk {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
 body {
     margin: 0;
     padding: 0;
@@ -43,5 +51,5 @@ body {
 .name {
     font-family: "josefin sans", sans-serif;
     font-size: 70px;
-    margin: 20px 0px;
+    margin: 10% 0px;
 }
