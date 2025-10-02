@@ -59,3 +59,20 @@ body {
     font-size: 3vw;
     line-height: 0.5;
 }
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.socials-item {
+    width: 10%;
+    margin-right: 5%;
+}
+
+.socials-item img {
+    width: 100%;
+    height: auto;
+}
