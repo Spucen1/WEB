@@ -20,7 +20,7 @@ body {
     justify-content: center;
     margin: 0;
     width: 100%;
-    height: 40vw;
+    height: 45vw;
 }
 
 .logo {
@@ -40,7 +40,7 @@ body {
     margin: 0 3%;
     background-color: black;
     height: 100%;
-    width: 2px;
+    width: 0.2%;
 }
 
 .container__info {
@@ -68,7 +68,7 @@ body {
 }
 
 .socials-item {
-    width: 10%;
+    width: 20%;
     margin-right: 5%;
 }
 
