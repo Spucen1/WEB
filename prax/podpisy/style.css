@@ -60,6 +60,10 @@ body {
     line-height: 0.5;
 }
 
+.contact-item a {
+    text-decoration: none;
+}
+
 .socials {
     display: flex;
     flex-direction: row;
