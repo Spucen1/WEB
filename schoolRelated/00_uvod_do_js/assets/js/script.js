@@ -7,6 +7,7 @@ const text = document.getElementById("text");
 if (btn && text) {
     btn.addEventListener("click", () => {
         text.textContent = "commit and push";
+        document.body.classList.toggle("alt-bg");
     });
 }
 
