@@ -10,4 +10,3 @@ if (btn && text) {
         document.body.classList.toggle("alt-bg");
     });
 }
-
