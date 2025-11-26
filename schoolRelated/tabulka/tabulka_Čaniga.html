@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Porovnanie Python vs JavaScript</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: white;
+            }
+
+            h1,
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0 auto;
+            }
+
+            th {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                text-align: left;
+                border: 1px solid #333;
+            }
+
+            td {
+                padding: 10px;
+                border: 1px solid #ccc;
+                vertical-align: top;
+            }
+
+            .concept {
+                font-weight: bold;
+                background-color: #666;
+                color: white;
+                text-align: center;
+            }
+
+            code {
+                background-color: #f5f5f5;
+                padding: 2px 4px;
+                font-family: monospace;
+            }
+
+            .code-block {
+                background-color: #f5f5f5;
+                padding: 8px;
+                font-family: monospace;
+                font-size: 13px;
+                margin: 5px 0;
+                border-left: 3px solid #999;
+            }
+
+            .subtitle {
+                text-align: center;
+                color: #666;
+            }
+
+            .col-concept {
+                width: 20%;
+            }
+
+            .col-language {
+                width: 40%;
+            }
+
+            .note {
+                margin-top: 30px;
+                text-align: center;
+                color: #666;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Porovnanie základných konceptov programovania</h1>
+        <h2 class="subtitle">Python vs JavaScript</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-concept">Koncept</th>
+                    <th class="col-language">Python</th>
+                    <th class="col-language">JavaScript</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="concept">PREMENNÉ</td>
+                    <td>
+                        <strong>Deklarácia:</strong><br />
+                        <div class="code-block">
+                            meno = "Ján"<br />
+                            vek = 25<br />
+                            cena = 19.99<br />
+                        </div>
+                        <strong>Typy:</strong> Dynamické typovanie, automatická detekcia typu
+                    </td>
+                    <td>
+                        <strong>Deklarácia:</strong><br />
+                        <div class="code-block">
+                            let meno = "Ján";<br />
+                            const vek = 25;<br />
+                            var cena = 19.99;<br />
+                        </div>
+                        <strong>Typy:</strong> Dynamické typovanie, <code>var</code>/<code>let</code>/<code>const</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="concept">CYKLY</td>
+                    <td>
+                        <strong>For cyklus:</strong><br />
+                        <div class="code-block">
+                            for i in range(5):<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br />
+                            <br />
+                            zoznam = [1, 2, 3]<br />
+                            for item in zoznam:<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(item)<br />
+                        </div>
+                        <strong>While cyklus:</strong><br />
+                        <div class="code-block">
+                            i = 0<br />
+                            while i < 5:<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;i += 1<br />
+                        </div>
+                    </td>
+                    <td>
+                        <strong>For cyklus:</strong><br />
+                        <div class="code-block">
+                            for (let i = 0; i < 5; i++) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br />
+                            }<br />
+                            <br />
+                            let zoznam = [1, 2, 3];<br />
+                            for (let item of zoznam) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(item);<br />
+                            }<br />
+                        </div>
+                        <strong>While cyklus:</strong><br />
+                        <div class="code-block">
+                            let i = 0;<br />
+                            while (i < 5) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;i++;<br />
+                            }<br />
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="concept">FUNKCIE</td>
+                    <td>
+                        <strong>Definícia:</strong><br />
+                        <div class="code-block">
+                            def pozdrav(meno):<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;return f"Ahoj {meno}!"<br /><br />
+
+                            sprava = pozdrav("Ján")<br />
+                            print(sprava)
+                        </div>
+                        <strong>Vlastnosti:</strong> Kľúčové slovo <code>def</code>, odsadenie definuje blok
+                    </td>
+                    <td>
+                        <strong>Definícia:</strong><br />
+                        <div class="code-block">
+                            function pozdrav(meno) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;return `Ahoj ${meno}!`;<br />
+                            }<br /><br />
+
+                            const pozdrav2 = (meno) => {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;return `Ahoj ${meno}!`;<br />
+                            };
+                        </div>
+                        <strong>Vlastnosti:</strong> <code>function</code> alebo arrow funkcie <code>=></code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="concept">PODMIENKY</td>
+                    <td>
+                        <strong>If/Elif/Else:</strong><br />
+                        <div class="code-block">
+                            vek = 18<br />
+                            if vek >= 18:<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("Dospelý")<br />
+                            elif vek >= 13:<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("Tînnedžer")<br />
+                            else:<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;print("Dieťa")
+                        </div>
+                        <strong>Operátory:</strong> <code>and</code>, <code>or</code>, <code>not</code>, <code>==</code>, <code>!=</code>
+                    </td>
+                    <td>
+                        <strong>If/Else If/Else:</strong><br />
+                        <div class="code-block">
+                            let vek = 18;<br />
+                            if (vek >= 18) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Dospelý");<br />
+                            } else if (vek >= 13) {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Tînnedžer");<br />
+                            } else {<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("Dieťa");<br />
+                            }
+                        </div>
+                        <strong>Operátory:</strong> <code>&&</code>, <code>||</code>, <code>!</code>, <code>===</code>, <code>!==</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="concept">POLIA/ZOZNAMY</td>
+                    <td>
+                        <strong>Zoznamy (Lists):</strong><br />
+                        <div class="code-block">
+                            zoznam = [1, 2, 3, "text"]<br /><br />
+
+                            zoznam.append(4)<br />
+                            zoznam[0] = 10<br />
+                            del zoznam[1]<br />
+                            dlzka = len(zoznam)
+                        </div>
+                        <strong>Vlastnosti:</strong> Dynamické, rôzne typy, indexovanie od 0
+                    </td>
+                    <td>
+                        <strong>Arrays:</strong><br />
+                        <div class="code-block">
+                            let pole = [1, 2, 3, "text"];<br /><br />
+
+                            pole.push(4);<br />
+                            pole[0] = 10;<br />
+                            pole.splice(1,1);<br />
+                            let dlzka = pole.length;
+                        </div>
+                        <strong>Vlastnosti:</strong> Dynamické, rôzne typy, indexovanie od 0
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="concept">ŠPECIFIKÁ</td>
+                    <td>
+                        <strong>Syntax:</strong><br />
+                        • Odsadenie (indentation) definuje bloky<br />
+                        • Bez zložených zátvoriek {}<br />
+                        • Dvojbodka : na konci hlavičiek<br />
+                        • PEP 8 štýl kódovania<br /><br />
+                        <strong>Interpretovaný jazyk</strong>
+                    </td>
+                    <td>
+                        <strong>Syntax:</strong><br />
+                        • Zložené zátvorky {} definujú bloky<br />
+                        • Bodkočiarky ; na konci príkazov<br />
+                        • Funkcionálne programovanie podporované<br />
+                        • Flexibilnejšia syntax<br /><br />
+                        <strong>Interpretovaný/JIT kompilovaný</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <p><strong>Poznámka:</strong> Oba jazyky sú dynamicky typované a podporujú objektovo orientované programovanie.</p>
+        </div>
+    </body>
+</html>
