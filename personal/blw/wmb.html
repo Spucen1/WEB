@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wash My Belly 🧽</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background: #fff;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+            }
+            h1 {
+                margin-top: 10px;
+                font-size: 2em;
+                color: #ff6fa5;
+                text-shadow: 1px 1px 2px #ffccdd;
+            }
+            #card {
+                position: relative;
+                width: 90vw;
+                max-width: 500px;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+            #scratchCanvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="38" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"/><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1"/></svg>')
+                        40 40,
+                    crosshair;
+            }
+            #message {
+                position: absolute;
+                bottom: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 1.6em;
+                color: #ff5e9c;
+                font-weight: bold;
+                text-shadow: 1px 1px 3px white;
+                display: none;
+                pointer-events: none;
+            }
+            canvas.confetti {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Wash my belly 🧽</h1>
+        <div id="card">
+            <img id="baseImage" src="dodo-velka-drevena-dekoracia-krtko-na-kopke.jpg" alt="Mole decoration" style="width: 100%; display: block" />
+            <canvas id="scratchCanvas"></canvas>
+            <div id="message">Maj krásne meninky 💖</div>
+        </div>
+        <canvas class="confetti" id="confetti"></canvas>
+
+        <script>
+            const img = document.getElementById("baseImage");
+            const canvas = document.getElementById("scratchCanvas");
+            const ctx = canvas.getContext("2d");
+            const message = document.getElementById("message");
+
+            img.onload = () => {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.fillStyle = "#f7e9e5"; // soft belly color
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            };
+
+            let scratching = false;
+            let lastPos = null;
+            let mousePressed = false;
+
+            function getPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                return {
+                    x: ((e.touches ? e.touches[0].clientX : e.clientX) - rect.left) * scaleX,
+                    y: ((e.touches ? e.touches[0].clientY : e.clientY) - rect.top) * scaleY,
+                };
+            }
+
+            function scratch(e) {
+                if (!scratching) return;
+                e.preventDefault();
+                const pos = getPos(e);
+                ctx.globalCompositeOperation = "destination-out";
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.lineWidth = 80; // Much bigger eraser
+
+                if (lastPos) {
+                    // Draw smooth line from last position to current
+                    ctx.beginPath();
+                    ctx.moveTo(lastPos.x, lastPos.y);
+                    ctx.lineTo(pos.x, pos.y);
+                    ctx.stroke();
+                } else {
+                    // First touch/click - draw circle
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, 40, 0, 2 * Math.PI);
+                    ctx.fill();
+                }
+                lastPos = pos;
+            }
+
+            canvas.addEventListener("mousedown", (e) => {
+                mousePressed = true;
+                scratching = true;
+                lastPos = null;
+                scratch(e);
+            });
+            canvas.addEventListener("mouseup", () => {
+                mousePressed = false;
+                scratching = false;
+                lastPos = null;
+            });
+            canvas.addEventListener("mousemove", scratch);
+            canvas.addEventListener("mouseleave", () => {
+                scratching = false;
+                lastPos = null;
+                // Don't reset mousePressed - we need to track if button is still down
+            });
+            canvas.addEventListener("mouseenter", (e) => {
+                // Resume scratching if mouse button is still pressed when re-entering
+                if (mousePressed && e.buttons === 1) {
+                    scratching = true;
+                    lastPos = null;
+                    scratch(e);
+                }
+            });
+
+            canvas.addEventListener("touchstart", (e) => {
+                scratching = true;
+                lastPos = null;
+                scratch(e);
+            });
+            canvas.addEventListener("touchend", () => {
+                scratching = false;
+                lastPos = null;
+            });
+            canvas.addEventListener("touchmove", scratch);
+            canvas.addEventListener("touchcancel", () => {
+                scratching = false;
+                lastPos = null;
+            });
+
+            // Global event listeners to catch mouse/touch release outside canvas
+            document.addEventListener("mouseup", () => {
+                if (scratching || mousePressed) {
+                    mousePressed = false;
+                    scratching = false;
+                    lastPos = null;
+                }
+            });
+            document.addEventListener("touchend", () => {
+                if (scratching) {
+                    scratching = false;
+                    lastPos = null;
+                }
+            });
+
+            // Check scratch completion
+            function checkScratch() {
+                const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                let cleared = 0;
+                for (let i = 3; i < data.length; i += 4) {
+                    if (data[i] === 0) cleared++;
+                }
+                if (cleared / (canvas.width * canvas.height) > 0.5) {
+                    message.style.display = "block";
+                    launchConfetti();
+                }
+            }
+            setInterval(checkScratch, 1000);
+
+            // Confetti effect
+            function launchConfetti() {
+                const confettiCanvas = document.getElementById("confetti");
+                const cCtx = confettiCanvas.getContext("2d");
+                confettiCanvas.width = window.innerWidth;
+                confettiCanvas.height = window.innerHeight;
+                const confettis = Array.from({ length: 150 }).map(() => ({
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight - window.innerHeight,
+                    r: Math.random() * 6 + 2,
+                    d: Math.random() * 10 + 5,
+                    color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+                    tilt: Math.random() * 10,
+                }));
+                function draw() {
+                    cCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                    confettis.forEach((p) => {
+                        cCtx.beginPath();
+                        cCtx.fillStyle = p.color;
+                        cCtx.fillRect(p.x, p.y, p.r, p.r);
+                    });
+                    update();
+                    requestAnimationFrame(draw);
+                }
+                function update() {
+                    confettis.forEach((p) => {
+                        p.y += Math.cos(p.d) + 1 + p.r / 2;
+                        p.x += Math.sin(p.d);
+                        if (p.y > confettiCanvas.height) {
+                            p.x = Math.random() * confettiCanvas.width;
+                            p.y = -10;
+                        }
+                    });
+                }
+                draw();
+            }
+        </script>
+    </body>
+</html>
