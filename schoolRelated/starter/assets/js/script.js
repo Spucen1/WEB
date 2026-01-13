@@ -41,9 +41,11 @@ btn.addEventListener("click", function () {
     if (zmenene == false) {
         btn.textContent = "Pôvodné farby";
         zmenene = true;
+        document.querySelector("body").style.background = "linear-gradient(135deg, #667eea 0%, #ffffff 100%)";
     } else {
         btn.textContent = "Zmeniť farby";
         zmenene = false;
+        document.querySelector("body").style.background = "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)";
     }
 });
 
