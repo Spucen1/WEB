@@ -32,9 +32,7 @@ function addTask() {
     saveTasks();
 }
 
-addBtn.addEventListener("click", function () {
-    addTask();
-});
+addBtn.addEventListener("click", addTask);
 taskInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         addTask();
