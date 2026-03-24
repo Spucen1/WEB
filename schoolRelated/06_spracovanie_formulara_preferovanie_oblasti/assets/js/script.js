@@ -27,7 +27,14 @@ function getOblasti() {
             oblastiList.push(element.value);
         }
     });
-    return oblastiList;
+    if (ineInput.value) {
+        oblastiList.push(ineInput.value.trim());
+    }
+    if (oblastiList.length < 3) {
+        window.alert("Vyber viac oblasti");
+    } else {
+        return oblastiList;
+    }
 }
 
 submitBtn.addEventListener("click", function (event) {
@@ -35,6 +42,5 @@ submitBtn.addEventListener("click", function (event) {
     oblasti = getOblasti();
     console.log(`meno: ${menoInput.value}`);
     console.log(`email: ${emailInput.value}`);
-    console.log(`oblasti: ${ineInput.value}`);
-    console.log(oblasti);
+    console.log(`oblasti: ${oblasti}`);
 });
