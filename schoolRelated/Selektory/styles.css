@@ -1,0 +1,46 @@
+h2 {
+    color: greenyellow;
+    font-size: 25px;
+}
+
+
+strong {
+    color: purple;
+}
+
+#strong2 {
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+.nadpis {
+    color: palevioletred;
+    font-size: 35px;
+}
+
+.perex {
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.spacing {
+    text-align: right;
+    letter-spacing: 10px;
+    word-spacing: 20px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    word-spacing: 10px;
+    letter-spacing: -1px;
+}
+
+.center {
+    line-height: 30px;
+    text-align: center;
+    font-size: smaller;
+    font-style: oblique;
+}

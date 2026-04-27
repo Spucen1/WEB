@@ -1,0 +1,20 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  position: relative;
+  height: 500px;
+  border: 2px solid #aaa;
+  margin-bottom: 4rem;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem;
+}

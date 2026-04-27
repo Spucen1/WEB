@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <title>Kontaktný formulár</title>
+
+  <link rel="stylesheet" href="style.css">
+
+<body>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <form action="">
+      <div class="form_item">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      
+
+      <div class="form_item">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" required>
+      </div>
+
+      <div class="form_item_mail">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form_item_query">
+        <label for="query-type">Query Type</label>
+        <div id="query-type" class="query-type">
+          <div class="query_item">
+            <input type="radio" id="general-enquiry" name="query-type" value="general-enquiry" class="query_input" required>
+            <label for="general-enquiry" class="query_label">General Enquiry</label>
+          </div>
+          <div class="query_item">
+            <input type="radio" id="support-request" name="query-type" value="support-request" class="query_input" required>
+            <label for="support-request" class="query_label">Support Request</label>
+          </div>
+        </div>
+    </form>
+  </div>
+
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!
+  
+
+</body>
+</html>

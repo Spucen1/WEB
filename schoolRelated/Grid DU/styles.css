@@ -1,0 +1,41 @@
+body{
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+    "header header header"
+    "side main side2"
+    "footer footer footer";
+}
+
+div{
+    height: 50px;
+    border: 1px solid black;
+}
+
+.header{
+    height: 80px;
+    grid-area: header;
+}
+
+.side{
+    height: auto;
+    grid-area: side;
+}
+
+.main{
+    height: auto;
+    grid-area: main;
+}
+
+.side2{
+    display: grid;
+    grid-template-areas: 
+    "cat side3";
+    height: auto;
+    grid-area: side2;
+}
+
+.footer{
+    height: 50px;
+    grid-area: footer;
+}

@@ -1,0 +1,52 @@
+header {
+    margin: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    padding: 10px;
+}
+
+header img {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 1;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main div {
+    height: 300px;
+    width: auto;
+    background-color: #ededed;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    border-radius: 30px;
+    padding: 0;
+    box-shadow: 100px;
+    overflow: hidden;
+}
+
+.item1 {
+
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.vizitka {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 3px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.info p {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.info p:last-child {
+    border-bottom: none;
+}
+
+.info strong {
+    color: #667eea;
+}
+
+.info span {
+    color: #333;
+    font-weight: 500;
+}
+
+button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+/* Trieda pre zmenu farieb - žiaci ju budú prepínať cez JS */
+.zmenene-farby .vizitka {
+    border-color: #2dd4bf;
+}
+
+.zmenene-farby .info p {
+    color: #14b8a6;
+}
+
+.zmenene-farby .info strong {
+    color: #0d9488;
+}
+
+.zmenene-farby .info span {
+    color: #14b8a6;
+}

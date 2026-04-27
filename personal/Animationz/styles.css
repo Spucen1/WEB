@@ -1,0 +1,10 @@
+@keyframes A {
+    from {color: aqua;}
+    to {color: red;}
+}
+
+p{
+    animation-name: A;
+    color: aqua;
+    animation-duration: 5s;
+}

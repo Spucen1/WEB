@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Newsletter - Prihlásenie</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Maturitný projekt</h1>
+            <p class="popis">Vyber oblasti, z ktorých si vieš predstaviť robiť projekt</p>
+
+            <form id="newsletterForm">
+                <!-- Meno -->
+                <div class="form-group">
+                    <label for="meno">Meno a priezvisko</label>
+                    <input type="text" id="meno" placeholder="Zadajte vaše meno" required />
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Emailová adresa</label>
+                    <input type="email" id="email" placeholder="vas@email.sk" required />
+                </div>
+
+                <!-- Témy -->
+                <div class="form-group">
+                    <label>Vyber oblasti (minimálne 3):</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Video" />
+                            <span>Video</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Audio" />
+                            <span>Audio</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Web" />
+                            <span>Web</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Fotografia" />
+                            <span>Fotografia</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Modelovanie a animácia" />
+                            <span>Modelovanie a animácia</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Elektronika" />
+                            <span>Elektronika</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Grafika (logo, vizuálna identita)" />
+                            <span>Grafika (logo, vizuálna identita)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Zalamovanie dokumentov (InDesign)" />
+                            <span>Zalamovanie dokumentov (InDesign)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="tema" value="Webdizajn" />
+                            <span>Webdizajn</span>
+                        </label>
+                    </div>
+                    <input type="text" id="ineOblasti" placeholder="Iné (napíš vlastnú oblasť)" />
+                </div>
+
+                <!-- Tlačidlo -->
+                <button type="submit" class="btn-submit">Odoslať</button>
+            </form>
+
+            <!-- Miesto pre výsledok/error -->
+            <div id="sprava" class="sprava hidden"></div>
+        </div>
+
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

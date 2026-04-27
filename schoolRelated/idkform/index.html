@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="n1" type="number" placeholder="Cislo 1" />
+        <input id="n2" type="number" placeholder="Cislo 2" />
+        <input id="n3" type="number" placeholder="Cislo 3" />
+
+        <button id="button">button</button>
+
+        <p id="output"></p>
+        <script>
+            const n1 = document.getElementById("n1");
+            const n2 = document.getElementById("n2");
+            const n3 = document.getElementById("n3");
+            const output = document.getElementById("output");
+            const button = document.getElementById("button");
+
+            let cisla = [];
+            let text;
+
+            function vypocitaj() {
+                cisla.push(parseInt(n1.value), parseInt(n2.value), parseInt(n3.value));
+                console.log(cisla);
+
+                if (cisla[0] === cisla[1] && cisla[1] === cisla[2]) {
+                    text = "rovnostranny";
+                } else if (cisla[0] === cisla[1] || cisla[1] === cisla[2] || cisla[0] === cisla[2]) {
+                    text = "rovnoramenny";
+                } else if (
+                    Math.pow(cisla[0], 2) + Math.pow(cisla[1], 2) === Math.pow(cisla[2], 2) ||
+                    Math.pow(cisla[0], 2) + Math.pow(cisla[2], 2) === Math.pow(cisla[1], 2) ||
+                    Math.pow(cisla[2], 2) + Math.pow(cisla[1], 2) === Math.pow(cisla[0], 2)
+                ) {
+                    text = "pravouhly";
+                }
+
+                output.textContent = text;
+
+                cisla = [];
+                text = "";
+            }
+
+            button.addEventListener("click", vypocitaj);
+        </script>
+    </body>
+</html>

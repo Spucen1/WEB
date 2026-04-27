@@ -1,0 +1,25 @@
+body {
+	font-family: system-ui, Arial, sans-serif;
+	margin: 2rem;
+	line-height: 1.6;
+}
+
+button {
+	padding: 0.6rem 1rem;
+	border-radius: 0.5rem;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.output {
+	padding: 0.5rem 0.75rem;
+	background: #f6f6f6;
+	border-radius: 0.5rem;
+	min-height: 1.8rem;
+}
+
+/* Alternatívne pozadie stránky prepínané triedou na <body> */
+.alt-bg {
+	background: #1e293b; /* tmavé pozadie */
+	color: #ffffff;      /* svetlý text pre kontrast */
+}
