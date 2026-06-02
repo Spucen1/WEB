@@ -1,0 +1,48 @@
+:root {
+    --background_color: #212121;
+    --secondary_background: #292929;
+    --font_color: #d6d6d6;
+}
+
+body {
+    background-color: var(--background_color);
+    color: var(--font_color);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0vw 5vw;
+    padding: 0;
+}
+
+.box {
+    border: solid #d6d6d6 1px;
+    border-radius: 10px;
+    padding: 0vw 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-bottom: 1vw;
+}
+
+select {
+    width: 15vw;
+    height: 25px;
+}
+
+.amount {
+    width: 31.75vw;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#vystup {
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}

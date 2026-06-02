@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conversion</title>
+        <link rel="stylesheet" href="style/normalize.css" />
+        <link rel="stylesheet" href="style/style.css" />
+    </head>
+    <body>
+        <h1>Fuh AI - conversion</h1>
+
+        <div class="box">
+            <h2>Conversion</h2>
+            <div class="container">
+                <select name="mena1" id="cur1">
+                    <option value="EUR">EUR</option>
+                    <option value="CZK">CZK</option>
+                    <option value="USD" selected="selected">USD</option>
+                </select>
+                <select name="mena2" id="cur2">
+                    <option value="EUR" selected="selected">EUR</option>
+                    <option value="CZK">CZK</option>
+                    <option value="USD">USD</option>
+                </select>
+                <button id="convert">Convert</button>
+            </div>
+            <div class="container">
+                <input type="text" id="value1" class="amount" />
+                <p id="vystup">idk</p>
+            </div>
+        </div>
+
+        <div class="box"></div>
+
+        <script src="script/script.js"></script>
+    </body>
+</html>
