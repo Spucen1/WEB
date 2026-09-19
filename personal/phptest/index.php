@@ -7,7 +7,8 @@
 </head>
 <body>
     <?php
-        echo "Hello Wold!";
+        $name = "Niggers";
+        echo "Hello, $name!";
     ?>
 </body>
 </html>
