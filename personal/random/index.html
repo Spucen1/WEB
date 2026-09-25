@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>randcol</title>
+    </head>
+    <body>
+        <h1 id="hex"></h1>
+        <script>
+            let full = "#";
+            for (let i = 0; i < 6; i++) {
+                let num = Math.floor(Math.random() * 16);
+
+                switch (num) {
+                    case 10:
+                        num = "A";
+                        break;
+                    case 11:
+                        num = "B";
+                        break;
+                    case 12:
+                        num = "C";
+                        break;
+                    case 13:
+                        num = "D";
+                        break;
+                    case 14:
+                        num = "E";
+                        break;
+                    case 15:
+                        num = "F";
+                        break;
+                }
+
+                full = full + num.toString();
+            }
+            console.log(full);
+            const h1 = document.getElementById("hex");
+            const node = document.createTextNode(full);
+            h1.appendChild(node);
+
+            const body = document.querySelector("body");
+            body.style = "background-color:" + full;
+        </script>
+    </body>
+</html>
