@@ -5,6 +5,6 @@
     }
 </style>
 <?php
-    $unavena = false;
-    echo ($unavena) ? "JJ" : "NN"
+    $name = "Niggas";
+    echo "<h1>Hello, $name!</h1>"
 ?>
