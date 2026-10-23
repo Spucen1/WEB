@@ -5,7 +5,11 @@
     }
 </style>
 <?php
-    $name = "Niggas";
+    $name = "Samuel";
+    $s = null;
+    if ($s == null) {
+        echo "idk";
+    }
     echo "<h1>Hello, $name!</h1>"
 ?>
 
