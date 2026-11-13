@@ -5,12 +5,6 @@
     }
 </style>
 <?php
-    $name = "Samuel";
-    $s = null;
-    if ($s == null) {
-        echo "idk";
-    }
+    $name = "Niggas";
     echo "<h1>Hello, $name!</h1>"
 ?>
-
-<h1>Hello, <?=$name?>!</h1>
